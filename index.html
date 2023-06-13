@@ -11,16 +11,17 @@
 </head>
 
 <body>
-    <aside class="menu">
+    <button id="openMenu">☰</button>
+    <aside class="menu menuMobile" id="menu">
         <div class="main-content menu-content">
             <div>
                 <h1>OdontoBlog <img src="assets/img/sorrizinho.svg" width="18" height="18"
                         alt="icone de um rosto sorrindo"> </h1>
             </div>
             <ul>
-                <li><a href="*">Início</a></li>
-                <li><a href="*">Posts</a></li>
-                <li><a href="*">Fale Conosco</a></li>
+                <li><a href="index.html" target="_parent">Início</a></li>
+                <li><a href="posts.html" target="_parent">Posts</a></li>
+                <li><a href="faleConosco.html" target="_parent">Fale Conosco</a></li>
             </ul>
         </div>
     </aside>
@@ -78,13 +79,14 @@
         <div class="main-content call-to-action">
             <h2>Fique por dentro de nossas novidades</h2>
             <div class="send-email">
-                <input id="email" type="text" placeholder="example@hotmail.com" required>
-                <button id="sendEmail" type="submit">Quero receber</button>
+                <form id="form-send-email"><input id="email" type="text" placeholder="example@hotmail.com" required>
+                </form>
+                <button id="sendEmail" form="form-send-email" type="submit">Quero receber</button>
             </div>
         </div>
     </section>
 
-    <footer>
+    <footer class="foot">
         <div class="rodape main-content">
             <p>blog da atp de comunicação aplicada</p>
             <p>todos os direitos reservados &copy;</p>

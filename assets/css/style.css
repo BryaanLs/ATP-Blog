@@ -65,6 +65,11 @@ ul {
 .menu {
     background-color: var(--primary-c);
     padding: 2rem;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    z-index: 0;
 }
 
 .menu h1 {
@@ -198,7 +203,6 @@ ul {
     cursor: pointer;
 }
 
-
 .send-email input {
     padding: 2rem 20rem 2rem 1rem;
     border: none;
@@ -224,10 +228,110 @@ ul {
     text-transform: uppercase;
 }
 
+.foot {
+    padding: 0 2rem;
+}
+
 .rodape p {
     font-size: 1.2rem;
 }
 
+#openMenu {
+    border: none;
+    background-color: var(--primary-c);
+    padding: .5rem 1rem;
+    border-radius: .2rem;
+    font-size: 3rem;
+    color: var(--secondary-c);
+    font-weight: bold;
+    cursor: pointer;
+    position: fixed;
+    right: 2rem;
+    top: 2rem;
+    z-index: 2;
+    display: none;
+}
+
+
+
+@media (max-width: 900px) {
+
+    .menu h1 {
+        margin-bottom: 2rem;
+    }
+
+    .menuMobile {
+        display: none;
+    }
+
+    .menu-content ul {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .menu-content ul li {
+        margin-top: 1rem;
+    }
+
+    .menu-content {
+        flex-direction: column;
+    }
+
+    #openMenu {
+        display: block;
+    }
+
+
+    .posts-content {
+        grid-template-columns: 1fr;
+    }
+
+    .rodape {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .rodape p {
+        margin: 1rem auto;
+    }
+
+    .call-to-action {
+        flex-direction: column;
+        padding: 0 2rem;
+    }
+
+    .hero h2 img {
+        width: 80%;
+        display: block;
+        margin: 0 auto;
+    }
+
+    .call-bg {
+        display: flex;
+        justify-content: center;
+    }
+
+    .call-to-action h2 {
+        margin: 4rem 0;
+        width: 100%;
+        text-align: left;
+    }
+
+    .send-email {
+        width: 100%;
+        display: grid;
+        grid-template-columns: 70% 30%;
+    }
+
+    .send-email input {
+        width: 100%;
+        padding: 2rem 1rem;
+    }
+
+
+
+
+}
 
 ::-webkit-scrollbar {
     background-color: var(--secondary-c);
