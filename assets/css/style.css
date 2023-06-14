@@ -4,7 +4,7 @@
     --primary-c: #036061;
     --secondary-c: #fff;
     --span-c: #848484;
-    --variation-primary-c: #058789;
+    --green-texts: #058789;
 }
 
 * {
@@ -16,8 +16,6 @@
 html {
     font-size: 62.5%;
 }
-
-
 
 h1,
 h2,
@@ -31,7 +29,6 @@ span {
 h1 {
     font-size: 5rem;
 }
-
 
 h2 {
     font-size: 4rem;
@@ -49,6 +46,10 @@ a {
 
 ul {
     list-style-type: none;
+}
+
+body {
+    padding-top: 84px;
 }
 
 .main-content {
@@ -69,7 +70,7 @@ ul {
     left: 0;
     right: 0;
     top: 0;
-    z-index: 0;
+    z-index: 100;
 }
 
 .menu h1 {
@@ -99,14 +100,13 @@ ul {
     font-weight: bold;
     position: relative;
     border-radius: .5rem;
-
 }
 
 .menu ul li a::after {
     content: '';
     width: 0;
     height: 1px;
-    background-color: var(--variation-primary-c);
+    background-color: var(--green-texts);
     position: absolute;
     bottom: 2px;
     left: 0;
@@ -124,7 +124,7 @@ ul {
     justify-content: center;
     align-items: center;
     padding: 9rem 0;
-    border-bottom: .1rem solid var(--variation-primary-c);
+    border-bottom: .1rem solid var(--green-texts);
 }
 
 .hero {
@@ -136,7 +136,7 @@ ul {
 
 .title-post-section {
     text-transform: uppercase;
-    color: var(--variation-primary-c);
+    color: var(--green-texts);
     margin-bottom: 2rem;
 }
 
@@ -151,7 +151,7 @@ ul {
 }
 
 .post h3 {
-    color: var(--variation-primary-c);
+    color: var(--green-texts);
     margin-bottom: 2rem;
 }
 
@@ -194,7 +194,7 @@ ul {
 .send-email button {
     border: none;
     padding: 1rem 3rem;
-    background-color: var(--variation-primary-c);
+    background-color: var(--green-texts);
     color: var(--secondary-c);
     font-weight: bold;
     font-size: 1.5rem;
@@ -224,7 +224,7 @@ ul {
     justify-content: space-between;
     border-top: 1px solid var(--primary-c);
     padding: 3rem 0;
-    margin-top: 12rem;
+    margin-top: 5rem;
     text-transform: uppercase;
 }
 
@@ -248,11 +248,122 @@ ul {
     position: fixed;
     right: 2rem;
     top: 2rem;
-    z-index: 2;
+    z-index: 200;
     display: none;
 }
 
+.article {
+    position: relative;
+    border-bottom: 1px solid var(--primary-c);
+    padding-bottom: 5rem;
+}
 
+.article h2 {
+    color: var(--green-texts);
+    padding: 2rem 0;
+}
+
+.article span {
+    display: block;
+    color: var(--span-c);
+    font-size: 1.5rem;
+    padding: 4rem 0;
+}
+
+.article a {
+    display: block;
+    position: absolute;
+    right: 0;
+    bottom: 10px;
+    padding: 2rem 0;
+    text-decoration: none;
+    padding: 1.5rem 3rem;
+    background-color: var(--green-texts);
+    color: var(--secondary-c);
+    border-radius: .5rem;
+}
+
+.article .notice {
+    background-color: var(--green-texts);
+    color: var(--secondary-c);
+    width: max-content;
+    padding: 1rem 2rem;
+    border-radius: .5rem;
+    margin: 2rem 0;
+
+}
+
+.title-contact {
+    text-align: center;
+    color: var(--green-texts);
+    padding: 2rem 0;
+    margin-bottom: 5rem;
+    border-bottom: 1px solid var(--primary-c);
+}
+
+.contact-text h3,
+.contact-text p {
+    margin: 2rem 0;
+}
+
+.contact-text h3 {
+    font-size: 4rem;
+    color: var(--green-texts);
+}
+
+.contact-text p,
+.contact-text a {
+    font-size: 2rem;
+}
+
+.contact-text a {
+    text-decoration: none;
+    color: var(--primary-c);
+    font-weight: bold;
+}
+
+.grid-contact {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+
+
+}
+
+.contact-icons {
+    position: relative;
+}
+
+.mockup {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.icons {
+    position: absolute;
+}
+
+.icons a {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    padding: 2rem;
+    transition: all .5s ease-in-out;
+    border-radius: 100%;
+}
+
+.icons a:hover {
+    transform: scale(105%);
+    box-shadow: 0 0 2px #606060ce;
+}
+
+.mockup img {
+    width: 70%;
+
+}
 
 @media (max-width: 900px) {
 
@@ -307,17 +418,19 @@ ul {
     }
 
     .call-bg {
+
         display: flex;
         justify-content: center;
     }
 
     .call-to-action h2 {
-        margin: 4rem 0;
+        margin: 2rem 0;
         width: 100%;
         text-align: left;
     }
 
     .send-email {
+        padding: 2rem 0;
         width: 100%;
         display: grid;
         grid-template-columns: 70% 30%;
@@ -329,8 +442,21 @@ ul {
     }
 
 
+    .grid-contact {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
 
+    .icons img {
+        width: 70%;
+    }
 
+}
+
+@media (max-width: 390px) {
+    .send-email button {
+        padding: 0;
+    }
 }
 
 ::-webkit-scrollbar {
@@ -343,7 +469,6 @@ ul {
     background-color: var(--primary-c);
     border-radius: 20rem;
 }
-
 
 ::selection {
     background-color: var(--primary-c);
