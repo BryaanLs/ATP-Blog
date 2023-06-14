@@ -38,6 +38,11 @@ h3 {
     font-size: 3rem;
 }
 
+input,
+button {
+    border-radius: .5rem;
+}
+
 p,
 li,
 a {
@@ -456,6 +461,7 @@ body {
 @media (max-width: 460px) {
     .send-email button {
         padding: 0;
+
     }
 }
 
