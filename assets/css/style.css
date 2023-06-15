@@ -286,6 +286,17 @@ body {
     background-color: var(--green-texts);
     color: var(--secondary-c);
     border-radius: .5rem;
+    transition: bottom .2s ease-in-out, box-shadow .2s ease-in-out;
+}
+
+.article a:hover {
+    bottom: 15px;
+    box-shadow: 0 5px var(--primary-c), 0 0 10px var(--primary-c);
+}
+
+.article a:focus {
+    outline: none;
+    background: var(--primary-c);
 }
 
 .article .notice {
@@ -295,7 +306,6 @@ body {
     padding: 1rem 2rem;
     border-radius: .5rem;
     margin: 2rem 0;
-
 }
 
 .title-contact {
@@ -331,8 +341,6 @@ body {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     align-items: center;
-
-
 }
 
 .contact-icons {
@@ -369,6 +377,65 @@ body {
     width: 70%;
 
 }
+
+.padrao-text-posts {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+}
+
+.post-text-content {
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+}
+
+.padrao-text-posts h2 {
+    color: var(--green-texts);
+}
+
+.padrao-text-posts p {
+    margin: 2rem 0;
+    text-align: justify;
+    word-break: unset;
+    text-indent: 3rem;
+    -webkit-hyphens: auto;
+    -ms-hyphens: auto;
+    hyphens: auto;
+}
+
+.card-img {
+    border-left: 1px solid var(--green-texts);
+    padding: 0 0 0 3rem;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+}
+
+.padrao-text-posts img {
+    display: block;
+    margin: 0 auto;
+    border-radius: 1rem;
+    box-shadow: 0 0 2px var(--green-texts);
+    width: 100%;
+    transition: box-shadow .3s ease-in-out;
+}
+
+.padrao-text-posts img:hover {
+    box-shadow: 0 0 8px var(--green-texts);
+}
+
+.padrao-text-posts a {
+    color: var(--green-texts);
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.padrao-text-posts a:hover {
+    color: var(--primary-c);
+}
+
+
 
 @media (max-width: 900px) {
 
@@ -455,6 +522,17 @@ body {
     .icons img {
         width: 70%;
     }
+
+    .card-img {
+        border-left: none;
+        padding: 3rem 0 0 0;
+        border-top: 1px solid var(--green-texts);
+    }
+
+    .padrao-text-posts {
+        grid-template-columns: 1fr;
+    }
+
 
 }
 
