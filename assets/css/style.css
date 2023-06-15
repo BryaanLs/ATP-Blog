@@ -149,6 +149,10 @@ body {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     gap: 2rem;
+    height: max-content;
+    /* background-color: red; */
+    align-items: center;
+    justify-content: space-between;
 }
 
 .post {
@@ -158,6 +162,7 @@ body {
 .post h3 {
     color: var(--green-texts);
     margin-bottom: 2rem;
+    font-size: 2.4rem;
 }
 
 .post p {
@@ -232,6 +237,7 @@ body {
     margin-top: 5rem;
     text-transform: uppercase;
 }
+
 
 .foot {
     padding: 0 2rem;
@@ -380,7 +386,7 @@ body {
 
 .padrao-text-posts {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1.5fr 1fr;
     align-items: center;
 }
 
@@ -391,11 +397,25 @@ body {
 }
 
 .padrao-text-posts h2 {
+    margin: 1.5rem 0;
     color: var(--green-texts);
+    position: relative;
+    width: 100%;
+    padding-right: 20px;
+}
+
+.padrao-text-posts h2::after {
+    content: '';
+    position: absolute;
+    width: 50%;
+    height: 1px;
+    left: 0;
+    bottom: -10px;
+    background-color: var(--green-texts);
 }
 
 .padrao-text-posts p {
-    margin: 2rem 0;
+    margin: .8rem 0;
     text-align: justify;
     word-break: unset;
     text-indent: 3rem;
@@ -433,6 +453,11 @@ body {
 
 .padrao-text-posts a:hover {
     color: var(--primary-c);
+}
+
+.no-shadow img,
+.no-shadow img:hover {
+    box-shadow: none;
 }
 
 
