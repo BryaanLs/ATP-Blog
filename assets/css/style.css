@@ -564,6 +564,20 @@ body {
         grid-template-columns: 1fr;
     }
 
+    .padrao-text-posts h2 {
+        font-size: 3rem;
+        text-align: center;
+    }
+
+    .padrao-text-posts h2::after {
+        left: 5%;
+        width: 80%;
+    }
+
+    .post-text-content {
+        padding: 2rem 0;
+    }
+
 
 }
 
